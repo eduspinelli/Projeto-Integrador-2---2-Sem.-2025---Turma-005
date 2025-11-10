@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Studio Jô Vieira</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="font-size-2">
+  <header class="header" role="banner">
+    <div class="logo">
+      <div class="mark" aria-hidden="true">Jô Vieira</div>
+      <div>
+        <div style="font-weight:700">Studio Jô Vieira</div>
+        <small style="color:#7a6a58">Beleza com carinho</small>
+      </div>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:0.6rem;">
+      <div class="accessibility-tools" role="toolbar" aria-label="Ferramentas de acessibilidade">
+        <button id="a11y-decrease" class="tool-btn" aria-label="Diminuir fonte">A−</button>
+        <button id="a11y-increase" class="tool-btn" aria-label="Aumentar fonte">A+</button>
+        <button id="a11y-contrast" class="tool-btn" aria-pressed="false" aria-label="Alternar alto contraste">Alto Contraste</button>
+      </div>
+      <nav role="navigation" aria-label="Menu principal">
+        <a href="#historia">História</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#fotos">Fotos</a>
+        <a href="#contato">Contato</a>
+        <a href="agendar.html" class="cta">Agendamento</a>
+        <a href="login.php">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <div id="a11y-live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <main class="container" role="main">
+    <section class="hero card" id="inicio" aria-labelledby="titulo-hero">
+      <div style="flex:1" class="text">
+        <h1 id="titulo-hero">Bem-vinda ao Studio Jô Vieira</h1>
+        <p>Um espaço dedicado ao cuidado e beleza. Profissionais experientes prontos para realçar sua melhor versão.</p>
+        <p style="margin-top:0.8rem"><strong>Endereço:</strong> Rua Doutor Mauro Paes de Almeida, 440 - Socorro</p>
+        <p><strong>Telefone:</strong> <a href="tel:+5511982156001">(11) 98215-6001</a></p>
+      </div>
+      <div style="flex:1">
+        <img src="imgs/Logo.jpg" alt="Logo" style="width:90%;border-radius:8px;"/>
+      </div>
+    </section>
+
+    <section id="historia" class="card" style="margin-top:1rem;" aria-labelledby="h-historia">
+      <h2 id="h-historia">História</h2>
+      <p>O Studio Jô Vieira nasceu com a missão de realçar a beleza de cada cliente, unindo técnica, carinho e um atendimento personalizado.</p>
+    </section>
+
+    <section id="servicos" class="card" aria-labelledby="h-servicos">
+      <h2 id="h-servicos">Serviços</h2>
+      <div class="services-grid" role="list">
+        <article class="card" role="listitem" aria-labelledby="s-corte">
+          <h3 id="s-corte">Corte de Cabelo Feminino</h3>
+          <p>R$90,00</p>
+        </article>
+        <article class="card" role="listitem" aria-labelledby="s-color">
+          <h3 id="s-color">Coloração (Com Produtos do Studio)</h3>
+          <p>R$170,00</p>
+        </article>
+        <article class="card" role="listitem" aria-labelledby="s-mani">
+          <h3 id="s-mani">Manicure</h3>
+          <p>R$32,00</p>
+        </article>
+        <article class="card" role="listitem" aria-labelledby="s-escova">
+          <h3 id="s-escova">Escova Cabelos Longos</h3>
+          <p>R$80,00</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="fotos" class="card" aria-labelledby="h-fotos">
+      <h2 id="h-fotos">Fotos</h2>
+      <div class="photos" role="list">
+        <img src="imgs/Cabelos.jpeg" alt="Foto de atendimento de cabelo" role="listitem" style="width:80%;border-radius:8px;"/>
+        <img src="imgs/Unhas.jpeg" alt="Foto de manicure" role="listitem" style="width:100%;border-radius:8px;"/>
+        <img src="imgs/Revitalização labial.jpg" alt="Foto de revitalização labial" role="listitem" style="width:80%;border-radius:8px;"/>
+      </div>
+    </section>
+
+    <section id="contato" class="card" aria-labelledby="h-contato">
+      <h2 id="h-contato">Contato</h2>
+      <div class="contact">
+        <div class="info" aria-label="Informações de contato">
+          <p><strong>Telefone:</strong> <a href="tel:+5511982156001">(11) 98215-6001</a></p>
+          <p><strong>Endereço:</strong> Rua Doutor Mauro Paes de Almeida, 440 - Socorro</p>
+          <p><strong>Redes:</strong></p>
+          <p><a href="#" target="_blank">Instagram</a> • <a href="#" target="_blank">Facebook</a></p>
+        </div>
+        <div class="info" aria-label="Horário de funcionamento">
+          <h3>Horário de Funcionamento</h3>
+          <p>Terça - Sexta: 9:00 - 19:00<br/>Sábado e Domingo: 9:00 - 14:00</p>
+        </div>
+      </div>
+    </section>
+
+    <footer role="contentinfo">
+      <p>© 2025 Studio Jô Vieira — Todos os direitos reservados</p>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

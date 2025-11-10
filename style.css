@@ -1,0 +1,92 @@
+:root{
+  --bg: #fbf6f0;
+  --beige: #f5ead6;
+  --gold: #b8860b;
+  --accent: #d9c29a;
+  --text: #333;
+  --max-width: 1000px;
+  --base-font: 16px;
+}
+
+*{box-sizing:border-box}
+html { font-size: var(--base-font); }
+body{
+  margin:0;
+  font-family: 'Arial', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height:1.4;
+}
+
+/* Header fixo e acessibilidade toolbar */
+.header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  background: linear-gradient(90deg, rgba(250,244,238,1), rgba(245,234,214,1));
+  border-bottom:1px solid rgba(184,134,11,0.08);
+  padding: 0.6rem 1rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  z-index:1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.logo{ display:flex; align-items:center; gap:0.6rem; }
+.logo .mark{ width:44px; height:44px; background:var(--gold); color:white; display:flex; align-items:center; justify-content:center; border-radius:8px; font-weight:bold; box-shadow:0 2px 4px rgba(184,134,11,0.15); }
+
+nav{ display:flex; align-items:center; gap:0.4rem; }
+nav a{ margin-left:0.6rem; text-decoration:none; color:var(--text); padding:0.35rem 0.6rem; border-radius:6px; font-weight:600; }
+nav a.cta{ background:var(--gold); color:white; }
+nav a:focus, button:focus, a:focus { outline:3px solid #f5e0a8; outline-offset:2px; }
+
+.accessibility-tools{ display:flex; gap:0.4rem; align-items:center; margin-left:0.8rem; }
+
+.tool-btn{
+  background:transparent; border:1px solid rgba(0,0,0,0.06); padding:0.3rem 0.5rem; border-radius:6px; cursor:pointer; font-weight:600;
+}
+.tool-btn:focus { outline:3px dashed #b8860b; }
+
+.container{ max-width:var(--max-width); margin:100px auto 40px; padding:0 1rem; }
+
+.card{ background:white; padding:1rem; border-radius:10px; border:1px solid rgba(0,0,0,0.04); box-shadow:0 2px 6px rgba(0,0,0,0.03); }
+
+.hero{ display:flex; gap:1rem; align-items:center; padding:1rem; background: linear-gradient(180deg, rgba(245,234,214,0.7), rgba(255,255,255,0.4)); border-radius:12px; }
+
+.services-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; margin-top:1rem; }
+
+.photos{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-top:1rem; }
+
+.contact{ display:flex; gap:1rem; flex-wrap:wrap; margin-top:1rem; }
+
+/* mensagens e aria-live */
+.sr-only{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+
+/* alto contraste */
+.high-contrast { background:#000 !important; color:#fff !important; }
+.high-contrast a { color:#fff !important; }
+.high-contrast .mark { background: #fff !important; color: #000 !important; }
+
+/* foco visível (maior) */
+:focus { box-shadow:0 0 0 4px rgba(184,134,11,0.15); }
+
+/* form */
+form { display:flex; flex-direction:column; gap:0.6rem; max-width:480px; }
+input, select, textarea, button { padding:0.6rem; border-radius:8px; border:1px solid #e3d8c7; font-size:1rem; }
+button{ background:var(--gold); color:white; border:none; font-weight:700; cursor:pointer; }
+
+footer{ text-align:center; margin-top:2rem; padding:2rem 0; color:#7a6a58; }
+
+/* small screens */
+@media(max-width:700px){
+  .hero{ flex-direction:column; align-items:flex-start }
+  .container{ margin-top:140px }
+}
+
+/* classes que JS usará para zoom de fonte */
+.font-size-1 { font-size: 14px; }
+.font-size-2 { font-size: 16px; }
+.font-size-3 { font-size: 18px; }
+.font-size-4 { font-size: 20px; }
